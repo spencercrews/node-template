@@ -1,0 +1,19 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "Node template for personal use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencercrews/node-template.git"
+  },
+  "author": "Spencer Crews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spencercrews/node-template/issues"
+  },
+  "homepage": "https://github.com/spencercrews/node-template#readme"
+}
