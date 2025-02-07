@@ -1,0 +1,32 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "Node template for personal use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "local": "node ./dist/server.js",
+    "docker:stop": "docker stop local-node-app && docker rm local-node-app",
+    "docker:build" : "docker build -t node-app .",
+    "docker:run" : "docker rm local-node-app && docker run -d -p 3000:3000 --name local-node-app node-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencercrews/node-template.git"
+  },
+  "author": "Spencer Crews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spencercrews/node-template/issues"
+  },
+  "homepage": "https://github.com/spencercrews/node-template#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
