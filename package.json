@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "local": "node ./dist/server.js",
-    "docker:stop": "docker stop local-node-app && docker rm local-node-app",
+    "docker:stop": "docker stop local-node-app",
+    "docker:destroy": "docker stop local-node-app && docker rm local-node-app",
     "docker:build" : "docker build -t node-app .",
-    "docker:run" : "docker rm local-node-app && docker run -d -p 3000:3000 --name local-node-app node-app"
+    "docker:run" : "docker run -d -p 3000:3000 --name local-node-app node-app",
+    "docker:exec": "docker exec -it 17b8090c66ae //bin//bash"
   },
   "repository": {
     "type": "git",
