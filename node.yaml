@@ -27,3 +27,8 @@ services:
             - node_modules/
         - action: rebuild
           path: package.json
+
+#  TODO: still have some issues seeing changes from either front-end or back-end service. Currently it is just returning 'Hellow World' without a random number.
+#     It is likely that I just need to rebuild the image and restart the container. However I would like to write in a watch script to automate this process.
+#     The last change I made here was removing the volumes. Docker was giving a warning that it was uneeded do to the 'sync action' configuration. 
+#     I will need to do some research on how to do this.
