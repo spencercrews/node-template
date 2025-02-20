@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "local": "node ./dist/server.js",
-    "docker:stop": "docker stop local-node-app",
-    "docker:destroy": "docker stop local-node-app && docker rm local-node-app",
-    "docker:build" : "docker build -t node-app .",
-    "docker:run" : "docker run -d -p 3000:3000 --name local-node-app node-app",
+    "docker:stop": "docker stop back-end",
+    "docker:destroy": "docker stop back-end && docker rm back-end",
+    "docker:build": "docker build -t back-end .",
+    "docker:run": "docker run -d -p 3000:3000 --name back-end back-end",
     "docker:exec": "docker exec -it 17b8090c66ae //bin//bash"
   },
   "repository": {
@@ -29,6 +29,9 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5"
   }
 }

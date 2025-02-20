@@ -1,0 +1,29 @@
+services:
+  front-end:
+    build: ./front-end
+    ports:
+      - 8080:8080
+    depends_on:
+      - back-end
+    develop:
+      watch:
+        - action: sync
+          path: ./front-end
+          target: /src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
+  back-end:
+    build: ./back-end
+    ports:
+      - 3000:3000 
+    develop:
+      watch:
+        - action: sync
+          path: ./back-end
+          target: /src
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json

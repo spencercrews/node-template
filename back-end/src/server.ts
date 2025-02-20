@@ -7,7 +7,9 @@ const app = express()
 
 // app.use('/', router)
 app.get('/', (req,res) =>{
-    res.send(`Hello World ${Math.random()}`)
+    const rnum = Math.random()
+    console.log(rnum)
+    res.send(`Hello World ${rnum}`)
 })
 
 app.listen(process.env.PORT, ()=>{
